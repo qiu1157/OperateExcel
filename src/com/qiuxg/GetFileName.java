@@ -28,7 +28,7 @@ public class GetFileName {
 			if(file2.isDirectory()) {
 				getFileName(file2);
 			}else {
-				ll.add(file2);
+				ll.add(file2);  
 			}
 		}
 		return ll;
