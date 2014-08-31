@@ -10,12 +10,14 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.qiuxg.vo.ExcelVo;
+
 public class ReaderExcel {
 
 	/**
 	 * @param args
 	 */
-	public List<String> getSheetContent(File file) {
+/*	public List<String> getSheetContent(File file) {
 		FileInputStream fis = null;
 		XSSFWorkbook hwb = null;
 		XSSFSheet sheet = null;
@@ -55,14 +57,50 @@ public class ReaderExcel {
 			}
 		}
 		return null;
-	}
+	}*/
 
+	public static boolean replaceModel(List<ExcelVo> datas,String sourceFilePath,String targetFilePath) {
+		boolean bool = false;
+		FileInputStream fis = null;
+		XSSFWorkbook hwb = null;
+		XSSFSheet sheet = null;
+		XSSFRow xrow = null;
+		XSSFCell xcell = null;
+		try {
+			fis = new FileInputStream(sourceFilePath);
+			hwb = new XSSFWorkbook(fis);
+			
+			for (int k = 0; k < hwb.getNumberOfSheets(); k++) {
+				sheet = hwb.getSheetAt(k);
+				String sheetName = sheet.getSheetName();
+				for(ExcelVo ev : datas) {
+					
+				}
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				fis.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}		
+
+
+		return bool;
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		File file = new File(
 				"D:\\个人知识管理\\1_项目工作\\10_长沙银行\\01_财富管理系统\\10_相关资料\\中信银行mapping\\ACRM\\A\\DM\\零售CRM数据映射_产品系列关联信息.xlsx");
 		ReaderExcel re = new ReaderExcel();
-		re.getSheetContent(file);
+		//re.getSheetContent(file);
 	}
 
 }
