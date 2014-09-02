@@ -6,15 +6,18 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelVo {
-	//excelÎÄ¼şÃû
+	//excelæ–‡ä»¶å
 	private String excelName;
-	//excel¹¤×÷±¡
+	//excelå·¥ä½œè–„
 	private XSSFWorkbook hwb;
 	private XSSFSheet sheet;
 	private int row;
 	private int col;
 	private XSSFRow xrow;
 	private XSSFCell xcell;
+	private String key;
+	private String value;
+	
 	public String getKey() {
 		return key;
 	}
@@ -33,9 +36,6 @@ public class ExcelVo {
 	public void setValue(String value) {
 		this.value = value;
 	}
-
-	private String key;
-	private String value;
 	
 	public String getExcelName() {
 		return excelName;

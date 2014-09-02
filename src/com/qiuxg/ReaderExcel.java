@@ -74,7 +74,11 @@ public class ReaderExcel {
 				sheet = hwb.getSheetAt(k);
 				String sheetName = sheet.getSheetName();
 				for(ExcelVo ev : datas) {
-					
+					xrow = sheet.getRow(ev.getRow());
+					xcell = xrow.getCell(ev.getCol());
+					String str = xcell.getStringCellValue();
+					str = str.replace(ev.getKey(), ev.getValue());
+							
 				}
 			}
 		} catch (FileNotFoundException e) {
