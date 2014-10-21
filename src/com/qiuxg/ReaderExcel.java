@@ -45,7 +45,7 @@ public class ReaderExcel {
 		for (int k = 0; k < hwb.getNumberOfSheets(); k++) {
 			sheet = hwb.getSheetAt(k);
 			String sheetName = sheet.getSheetName();
-			if ("字段级映射".equals(sheetName)) {
+			if ("锟街段硷拷映锟斤拷".equals(sheetName)) {
 				for (int i = 2; i < sheet.getPhysicalNumberOfRows(); i++) {
 					xrow = sheet.getRow(i);
 					xcell = xrow.getCell(6);
@@ -102,7 +102,7 @@ public class ReaderExcel {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		File file = new File(
-				"D:\\个人知识管理\\1_项目工作\\10_长沙银行\\01_财富管理系统\\10_相关资料\\中信银行mapping\\ACRM\\A\\DM\\零售CRM数据映射_产品系列关联信息.xlsx");
+				"");
 		ReaderExcel re = new ReaderExcel();
 		//re.getSheetContent(file);
 	}
