@@ -7,7 +7,7 @@ import java.util.List;
 public class GetFileName {
 
 	/**
-	 * @param dir 目标路径
+	 * @param dir 目锟斤拷路锟斤拷
 	 */
 	List<File> ll = new ArrayList<File>();
 	public List<File> getFileName(File file) {
@@ -26,7 +26,7 @@ public class GetFileName {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		GetFileName gfn = new GetFileName();
-		File file = new File("d:\\个人知识管理\\1_项目工作\\10_长沙银行\\01_财富管理系统\\11_mapping\\");
+		File file = new File("e:\\涓汉鐭ヨ瘑绠＄悊\\1_椤圭洰宸ヤ綔\\11.鍗庡叴閾惰\\02.宸ョ▼搴揬\03.缂栫爜瀹炵幇\\01 Mapping\\G灞俓\G_LN\\");
 		List<File> l = gfn.getFileName(file);
 		for(File file2 : l) {
 			System.out.println(file2.getName());
